@@ -18,14 +18,14 @@ Wireshark: For analyzing the PCAP file and inspecting network traffic.
 Splunk: For aggregating and visualizing the log data to detect anomalous patterns and correlate events across multiple logs.
 Investigation Process
 
-## A. Initial Analysis with Wireshark:
+1. Initial Analysis with Wireshark:
 
 Filtered by HTTP Protocol: Narrowed the focus to relevant traffic.
 Identified large packets: Targeted packets over 600 MB to locate potential data downloads.
 Tracked TCP and HTTP Streams: Enabled clearer visualization of data, revealing:
 Stolen packets containing ARNs and IDs tied to compromised credentials.
 
-## B. Detailed Analysis with Splunk:
+2. Detailed Analysis with Splunk:
 
 Filtered logs using arn:aws:iam: Isolated entries connected to the stolen keys.
 Applied additional filters for webapp-role: Focused on the compromised role, uncovering:
